@@ -1,0 +1,283 @@
+/* Permet une transition fluide entre les modes */
+*{
+  transition: background-color 1s, filter 1s, color 1s, border-color 1s;
+}
+/* Gere la luminosité des images */
+.brightness { filter: var(--brightness); }
+
+/* Attributs de la partie haute du bloc gacuhe */
+.head{
+  display: flex; /* Type de positionnement. Place les élements les uns a la suite des autres (photo et nom) */
+  align-items: center; /* Poisition des éléments au centre */
+  justify-content: space-between; /* Espacement des éléments regulier */
+  padding-top: 2vh; /* Padding haut */
+}
+/* Attributs du trait sous "Hippolyte Blot" */
+.trait_horizontal{
+  border-top: 2px solid var(--couleur1); /* Initiliasation d'une bordure */
+  width: 35vh; /* Largeur */
+  margin-left: 17vh;
+  padding-bottom: 5vh;
+  animation: load_trait 3s normal forwards; /* Animation lié aux keyframes */
+}
+/* Attributs du trait à coté de "About me" */
+.trait_vertical{
+  border-left: 2px solid var(--couleur1);
+  margin-left: 3vh;
+  margin-right: 0vh;
+  margin-top: 2vh;
+  animation: load_trait_vertical 3s normal forwards;
+}
+/* Permet d'ecrire "Hippolyte" plus fin que "Blot" */
+.maigre{
+  font-size: 1em; /* Taille de la police */
+  font-weight: 100; /* Epaisseur de la police */
+  margin-left: 0; /* Suppression du margin gauche */
+}
+/* Permet d'ecrire "Blot" plus epais que "Hippolyte" */
+.gras{
+  font-weight: bold;
+  font-size: 1em;
+  margin-left: 0;
+}
+/* Gere les propriétés du bloc "contact */
+.contenu-contact{
+  display: flex;
+  justify-content: center;
+}
+/* Empeche le wrap des blocs */
+.nowrap{
+  display: flex;
+  flex-wrap: nowrap;
+}
+/* Gere les pourcentages des skill-bars */
+.lvl{
+  font-size: 1em;
+  animation: visible 3s normal forwards; /* Affichage progressif du contenu */
+}
+/* Applique la couleur de fond à l'element */
+.color-fond{
+  color: var(--couleur1);
+}
+/* Permet de décaler l'icone tel  */
+#decal{
+  padding-left: 5vh;
+}
+/* Gere le container "contact" */
+.contact{
+  display: flex;
+  flex-direction: column; /* Direction de la disposition des blocs contenus verticale */
+  justify-content: space-between;
+  height: 18vh; /* Hauteur */
+  padding-left: 0;
+}
+/* Decale les images contenues dans "contact" vers le bas */
+.contact img{
+  padding-top: 1vh;
+}
+/* Gere le texte des balises p dans les nowrap et les balises a (hypertext) */
+.nowrap p, a{
+  font-size: 0.7em;
+  color: var(--couleur1); /* Couleur de la police */
+  margin: 2vh;
+  margin-right: 3vh;
+}
+/* Container gauche (fixed) */
+header{
+  position: fixed; /* Position de l'element fixe (sorti du flux) */
+  background-color: var(--couleur2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Positionnement des items au debut */
+  font-size: 2em;
+  height: 100vh;
+  width: 55vh;
+}
+/* Gere les propriétés générales du contenu de la page */
+body{
+  background-color:var(--couleur1); /* Couleur de fond */
+  margin: 0;
+  font-family: Helvetica, sans-serif; /* Typographie */
+}
+/* Gere les balises de type span */
+span{
+  font-size: 1.25em;
+  color: var(--couleur1);
+  margin-left: 5%;
+}
+/* Gere les balises de type p */
+p{
+  font-size: 1.5em;
+  text-align: justify; /* Permet de justifier le texte (espacements reguliers) */
+  margin-left: 1vh;
+  color: var(--couleur1);
+}
+
+/* Gere le texte au dessus des skill-bars */
+.skill_text{
+  font-size: 2em;
+  padding: 0;
+  margin: 2%;
+  margin-left: 5%;
+  color: var(--couleur2);
+}
+/* Propriétés des titres secondaires */
+h2{
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0;
+  margin-left: 1em;
+  margin-bottom: 0em;
+  color: var(--couleur3);
+  width: 80%;
+  height: 12%;
+}
+/* Propriétés des 3e titres */
+h3{
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  color: var(--couleur1);
+  margin-left: 2.5%;
+}
+/* Propriétés des 4e titres */
+h4{
+  margin: 0em;
+  padding: 2vh;
+  font-size: 1.25em;
+  color: var(--couleur1);
+  margin-left: 2.5%;
+}
+/* Gere l'agencement des éléments qu'il contient */
+.img-container{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+/* Gere les propriétés des éléments qu'il contient (utilisé dans Languages) */
+.contenu{
+  font-size: 1.5em;
+}
+/* Gere l'agencement des elements de la partie "Languages" */
+#content-language{
+  margin-top: 1vh;
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Les elements sont renvoyé a la ligne suivante si la place n'est pas suffisante */
+}
+/* Container des points pour évaluer le niveau dans une langue */
+.rate{
+  display: flex;
+  margin-left: 5vh;
+  margin-top: 2vh;
+}
+/* Propriétés pour definir des cercles correspondant au points contenus dans .rate */
+.circle{
+  margin-left: 1em;
+  width: 20px;
+  height: 20px;
+  color: var(--couleur1);
+  border: solid 2px var(--couleur1); 
+  border-radius: 50%; /* Permet de transformer la bordure en cercle */
+  width: 1.25em;
+  height: 1.25em;
+}
+/* Gere l'animation progressive des points de .rate */
+/* Temps d'animation plus long de 0.5s pour chaque point par rapport au precedent */
+.checked{ /* Premier point */
+  animation: change-color 1s  forwards;}
+.checked + .checked{ /* Deuxieme point */
+  animation: change-color 1.5s  forwards;}
+.checked + .checked + .checked{ /* Troisieme point */
+  animation: change-color 2s normal forwards;}
+.checked + .checked + .checked + .checked{ /* Quatrieme point */
+  animation: change-color 2.5s normal forwards;}
+.checked + .checked + .checked + .checked + .checked{ /* Cinquieme point */
+  animation: change-color 3s normal forwards;}
+
+/* Prorpriété de la timeline */
+.timeline {
+  position: relative;
+  width: 600px;
+  margin: 0;
+}
+/* Prorpriété de la timeline (pseudo-élément) */
+.timeline::after {
+  content: ''; /* Permet d'afficher la timeline meme sans contenu */
+  position: absolute;
+  width: 5px;
+  background-color: var(--couleur3);
+  /* Positionnement de l'element */
+  top: 0;
+  bottom: 0;
+  right: 95%;
+  margin-left: -3px;
+}
+/* Largeur du contenu de la timeline */
+.content{
+  width: 50%;
+}
+/* Applique la couleur secondaire au texte */
+.black_text{
+  color: var(--couleur2);
+}
+/* Container autour du content */
+.container {
+  padding: 10px 25px;
+  position: relative;
+  width: 90%;
+  left: 4.5%;
+}
+/* Cercle de la timeline */
+.container::after {
+  content: ''; /* Permet d'afficher les cercle meme sans contenu */
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: -17px;
+  background-color: var(--couleur1);
+  border: 4px solid var(--couleur2);
+  top: 15px;
+  border-radius: 50%; /* Permet de transformer la bordure en cercle */
+  z-index: 1; /* Permet d'afficher le cercle au dessus de la ligne */
+  
+}
+/* Place cercle droit */
+.container::after {
+  left: -11px;
+}
+
+/* Place cercle gauche */
+.content {
+  padding: 1vh;
+  background-color: var(--couleur2);
+  position: relative;
+}
+/* Permet de garder les éléments bien placés */
+* {box-sizing:border-box}
+
+/* Container pour les skill-bars */
+.container_skill {
+  width: 90%;
+  background-color: var(--couleur3); 
+  margin-left: 3%;
+}
+/* Gere les propriétés des éléments à l'interrieur des skill-bars */
+.skills {
+  text-align: right; /* Place toujours le texte sur la droite du container */
+  padding: 5px;
+  color: var(--couleur1);
+  font-size: 1.5em;
+}
+/* Gere la taille des barres de progression des skills */
+.html {width: 90%;} 
+.css {width: 80%;} 
+.js {width: 65%;} 
+.php {width: 60%;}
+/* Permet le chargement progressif des skill-bars a l'ouverture de la page */
+.progress{
+  animation: load 3s normal forwards;
+  background-color: var(--couleur2);
+  padding: 0.75vh;
+}

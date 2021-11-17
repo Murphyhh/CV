@@ -1,0 +1,16 @@
+/* Set de couleurs (et autres modifs) du light-mode */
+body.light-mode{
+    --couleur1: rgb(255, 255, 255); /* couleur de fond */
+    --couleur2: rgb(0, 41, 107); /* couleur principale */
+    --couleur3: rgb(63, 107, 136); /* couleur secondaire */
+    --brightness:  brightness(1); /* luminosité des images */
+    --btn-content: "Dark mode"; /* texte du boutton */
+}
+/* Set de couleurs (et autres modifs) du dark-mode */
+body.dark-mode{
+    --couleur1: rgb(83, 83, 83); /* couleur de fond */
+    --couleur2: rgb(0, 0, 0); /* couleur principale */
+    --couleur3: rgb(66, 66, 66); /* couleur secondaire */
+    --brightness: brightness(0.4); /* luminosité des images */
+    --btn-content: "Light mode"; /* texte du boutton */
+}

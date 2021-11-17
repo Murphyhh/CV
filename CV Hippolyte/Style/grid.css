@@ -1,0 +1,54 @@
+/* Attributs du bloc principal (partie droite) */
+.grid-container{
+  display: grid;
+  /* Repartition de l'espace entre les differentes lignes et colonnes grace aux fractions */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6fr 2.5fr 1.5fr;
+  /* Placement des differents blocs */
+  grid-template-areas: 
+  "a b"
+  "c d"
+  "e e";
+  height: 120vh;
+  width: 98vw;
+  padding-left: 55vh;
+}
+/* Attributs du sous-bloc 1 (skills) */
+.grid-item-1{
+  grid-area: a; /* Nom de l'element pour "grid-template-areas" */
+  background-color: var(--couleur1); /* Couleur de fond de l'element */
+  display: flex; /* Postionnement type flex */
+  flex-direction: column; /* Sens de positionnement */
+}
+/* Attributs du sous-bloc 2 (education) */
+.grid-item-2{
+  grid-area: b;
+  background-color: var(--couleur1);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Permet de placer les elements a la ligne si la place n'est pas suffisante */
+}
+/* Attributs du sous-bloc 3 (interest) */
+.grid-item-3{
+  grid-area: c;
+  background-color: var(--couleur2);
+  width: 95%;
+  justify-self: flex-end; /* Colle le bloc sur la droite pour que lui et les grid-items 4 et 5 forment un bloc centré */
+  border-right: 2px solid var(--couleur3); /* Petite bordure separent les trois grid-items du bas */
+}
+/* Attributs du sous-bloc 4 (languages) */
+.grid-item-4{
+  grid-area: d;
+  background-color: var(--couleur2);
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+/* Attributs du sous-bloc 5 (software-skills) */
+.grid-item-5{
+  grid-area: e;
+  background-color: var(--couleur2);
+  width: 95%;
+  justify-self: center; /* Centre le bloc pour que lui et les grid-items 3 et 4 forment un bloc centré */
+  border-top: 2px solid var(--couleur3); /* Petite bordure separent les trois grid-items du bas */
+}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Titre de la page -->
+    <title>Hippolyte</title>
+    <!-- Liens avec les differents css -->
+    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="Style/color_set.css">
+    <link rel="stylesheet" href="Style/grid.css">
+    <link rel="stylesheet" href="Style/keyframes.css">
+    <link rel="stylesheet" href="Style/button.css">
+    <!-- Liens avec le js -->
+    <script src="Script/script.js" defer></script>
+  </head>
+  <!-- Contenu de la page -->
+  <body class='light-mode'> <!-- Initialisation en mode light -->
+    <!-- Contenu de la partie gauche fixe -->
+    <header>
+      <!-- Premier bloc du header (photo de profil et nom)-->
+      <article class="head">
+        <img class="brightness" src="Media/tete.png" alt="Photo de profil" height=150> <!-- Photo de profil -->
+        <p><span class="maigre">Hippolyte</span> <span class="gras">Blot</span></p>
+      </article>
+
+      <div class="trait_horizontal"></div> <!-- Trait decoratif -->
+      <h4>About me</h4>
+      <article class="nowrap">
+      <div class="trait_vertical"></div> <!-- Trait decoratif -->
+        <!-- Texte du About me -->
+        <p>Passionate about IT for many years now, 
+          I would like to make it my job by specializing, 
+          if possible, in the field of AI. 
+          I am also interested in web development as well 
+          as the architecture of digital objects. 
+          I love discovering and innovating 
+          in these fields.</p>
+      </article>
+      <h4>Contact</h4>
+      <article class="nowrap">
+        <div class="trait_vertical"></div> <!-- Trait decoratif -->
+          <div class="contact">
+            <div class="contenu-contact">
+              <img class="brightness" src="Media/insta.png" alt="Logo Instagram" height="40"> <!-- Image instagram -->
+              <a href="https://instagram.com/hippo.bl?utm_medium=copy_link">@hippo.bl</a> <!-- Lien vers instagram -->
+            </div>
+            <div class="contenu-contact">
+              <img class="brightness" src="Media/linkedin.png" alt="Logo Twitter" height="40"> <!-- Image linkedin -->
+              <a href="https://www.linkedin.com/in/hippolyte-blot-95b495221">@hippo.bl</a> <!-- Lien vers linkedin -->
+            </div>
+            <div class="contenu-contact" id="decal"> 
+              <img class="brightness" src="Media/tel.png" alt="Logo telephone" height="40"> <!-- Image telephone -->
+              <p>07 86 64 94 16</p>
+            </div>
+          </div>
+        </article>
+      <!-- Boutton permettant le changement entre light-mode et dark-mode -->
+      <button id="btn-dark-mode" style="vertical-align:middle"><span></span></button>
+    </header>
+
+    <!-- Déclaration du grid principal gerant la partie droite de la page -->
+    <section class="grid-container">
+      <!-- Déclaration du premier element du grid en rapport avec les competences -->
+      <article class="grid-item grid-item-1"><h2>SKILLS</h2>
+        <p class="skill_text">Python</p>
+        <!-- Barre de progrression 1 -->
+        <div class="container_skill">
+          <div class="skills html"><div class="progress"><span class="lvl">90%</span></div></div>
+        </div>
+
+        <p class="skill_text">OS (Linux/Windows/MacOS)</p>
+        <!-- Barre de progrression 2 -->
+        <div class="container_skill">
+          <div class="skills css"><div class="progress"><span class="lvl">80%</span></div></div>
+        </div>
+        
+        <p class="skill_text">HTML/CSS</p>
+        <!-- Barre de progrression 3 -->
+        <div class="container_skill">
+          <div class="skills js"><div class="progress"><span class="lvl">65%</span></div></div>
+        </div>
+
+        <p class="skill_text">SQL</p>
+        <!-- Barre de progrression 4 -->
+        <div class="container_skill">
+          <div class="skills php"><div class="progress"><span class="lvl">60%</span></div></div>
+        </div>
+      </article>
+      <!-- Déclaration du deuxieme element du grid en rapport avec l'education -->
+      <article class="grid-item grid-item-2"><h2>EDUCATION</h2>
+        <!-- Déclaration de la timeline -->
+        <div class="timeline">
+          <!-- Contenu du 1er bloc -->
+          <div class="container">
+            <div class="content">
+              <!-- Date du 1er bloc -->
+              <h3>2018</h3>
+              <!-- Texte du 1er bloc -->
+              <span>St-Exupery high school</span>
+            </div>
+            <!-- Description du 1er bloc -->
+            <p class="black_text">General baccalaureate specializing in mathematics / NSI (expert maths option)</p>
+          </div>
+          <!-- Contenu du 2eme bloc -->
+          <div class="container">
+            <div class="content">
+              <!-- Date du 2eme bloc -->
+              <h3>2021</h3>
+              <!-- Texte du 2eme bloc -->
+              <span>IT I.U.T Lyon 1</span>
+            </div>
+            <!-- Description du 2eme bloc -->
+            <p class="black_text">IT BUT (3 years) at Claude Bernard Lyon 1 University</p>
+          </div>
+        </div> 
+      </article>
+      <!-- Déclaration du troisieme element du grid en rapport avec les centres d'interets -->
+      <article class="grid-item grid-item-3"><h2 class="color-fond">INTEREST</h2>
+        <div class="img-container">
+          <!-- Images representants chaque centre d'interet -->
+          <img class="brightness" src="Media/boxe.png" alt="Icone boxe" height="125">
+          <img class="brightness" src="Media/velo.png" alt="Icone velo" height="125">
+          <img class="brightness" src="Media/theatre.png" alt="Icone theatre" height="125">
+          <img class="brightness" src="Media/piano.png" alt="Icone piano" height="125">
+        </div>
+      </article>
+      <!-- Déclaration du quatrieme element du grid en rapport avec les langues -->
+      <article class="grid-item grid-item-4">
+        <h2 class="color-fond">LANGUAGES</h2>
+        <div id="content-language">
+          <!-- Declaration d'un bloc contenant les points -->
+          <div class="rate">
+            <div class="contenu contenu1 color-fond nowrap">FRENCH :</div>
+            <!-- Déclaration des points (validé si "checked") -->
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+          </div>
+          <!-- Declaration d'un bloc contenant les points -->
+          <div class="rate">
+            <div class="contenu contenu2 color-fond nowrap">ENGLISH :</div>
+            <!-- Déclaration des points (validé si "checked") -->
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle"> </div>
+          </div>
+          <!-- Declaration d'un bloc contenant les points -->
+          <div class="rate">
+            <div class="contenu contenu3 color-fond nowrap">GERMAN :</div>
+            <!-- Déclaration des points (validé si "checked") -->
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle checked"> </div>
+            <div class="circle"> </div>
+            <div class="circle"> </div>
+          </div>
+        </div>
+      </article>
+      <!-- Déclaration du cinquieme element du grid en rapport avec les competences logicielles -->
+      <article class="grid-item grid-item-5"><h2 class="color-fond">SOFTWARE SKILLS</h2>
+        <div class="img-container">
+          <!-- Images representants chaque logiciel -->
+          <img class="brightness" src="Media/photoshop.png" alt="Logo photoshop" height="150">
+          <img class="brightness" src="Media/premiere-pro.png" alt="Logo premiere-pro" height="150">
+          <img class="brightness" src="Media/word.png" alt="Logo word" height="150">
+          <img class="brightness" src="Media/powerpoint.png" alt="Logo powerpoint" height="150">
+          <img class="brightness" src="Media/excel.png" alt="Logo excel" height="150">
+          <img class="brightness" src="Media/visual.png" alt="Logo vscode" height="125">
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

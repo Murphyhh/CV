@@ -1,0 +1,27 @@
+/* Animation des skill-bars */
+@keyframes load {
+    0% { width: 0;} /* Etat de l'attribut width au debut de l'animation*/
+    100% { width: 100%;} /* Etat de l'attribut width a la fin de l'animation*/
+}
+/* Animation du trait horizontal */
+@keyframes load_trait {
+    0% { width: 0;}
+    100% { width: 35vh;}
+}
+/* Animation des traits verticaux */
+@keyframes load_trait_vertical {
+    0% { height: 0;}
+    100% { height: 16vh;}
+}
+/* Animation d'invisible vers visible (% skill-bars) */
+@keyframes visible {
+    0% {opacity: 0;}
+    50% {opacity: 0;} /* Etat de l'attribut opacity a la moitié de l'animation */
+    100% {opacity: 1;}
+}
+/* Animation de changement de couleur des points de notation de language */
+@keyframes change-color {
+    0% {background-color: var(--couleur2);}
+    50% {background-color: var(--couleur2);}
+    100% {background-color: var(--couleur1);}
+}
